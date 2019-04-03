@@ -1,3 +1,8 @@
 jupyterhub_cookie_secret
 *.pid
 *.sqlite
+*.cache
+*.ipynb_checkpoints
+*.ipython
+*.jupyterhub_cookie_secret*.local
+*.ipynb

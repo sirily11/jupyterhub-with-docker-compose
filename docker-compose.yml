@@ -1,0 +1,16 @@
+version: "3"
+services:
+  jupyter-server:
+    build: ./build
+    command:
+      - jupyterhub
+    volumes:
+      - ./notebook-data:/home/sirily11
+      - ./config:/srv/jupyterhub
+    ports:
+      - 5000:8000
+      - 8081:8081
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    stdin_open: true
+    tty: true

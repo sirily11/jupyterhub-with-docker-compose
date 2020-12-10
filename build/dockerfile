@@ -1,3 +1,4 @@
 FROM jupyterhub/jupyterhub:latest
+RUN pip install jupyter
 RUN useradd -ms /bin/bash  sirily11
 RUN echo sirily11:1234 | chpasswd

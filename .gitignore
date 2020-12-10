@@ -6,3 +6,4 @@ jupyterhub_cookie_secret
 *.ipython
 *.jupyterhub_cookie_secret*.local
 *.ipynb
+*.tar

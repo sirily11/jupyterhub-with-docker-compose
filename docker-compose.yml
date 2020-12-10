@@ -8,9 +8,16 @@ services:
       - ./notebook-data:/home/sirily11
       - ./config:/srv/jupyterhub
     ports:
-      - 5000:8000
-      - 8081:8081
+      - 3000:8000
+      - 8083:8081
     environment:
       - JUPYTER_ENABLE_LAB=yes
     stdin_open: true
     tty: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 10m
+        max-file: "3"
+        labels: "production_status"
+        env: "os"
